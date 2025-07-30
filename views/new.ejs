@@ -1,0 +1,53 @@
+<%- include("partials/header.ejs") %>
+
+
+<div class="form-wrapper">
+<div class="form-arrow"><a href="/">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" 
+       viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+       style="width: 24px; height: 24px;">
+    <path stroke-linecap="round" stroke-linejoin="round"
+          d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
+  </svg></a>
+</div>
+
+<form class="book-form" action="/post?id=<% if (n){ %><%=b.id %><% } %>" method="post">
+    <h1>Enter the Details</h1>
+    <% if (n){ %>
+    <label for="title">Title</label>
+    <input id="title" name="title" type="text" placeholder="add a title" value="<%= b.title %>" class="form_input"> 
+
+    <label for="isbn">ISBN</label>
+    <input id="isbn" name="isbn" type="text" placeholder="add a isbn" value="<%= b.isbn %>" class="form_input">
+
+    <label for="author">Author</label>
+    <input id="author" name="author" type="text" placeholder="add Author" value="<%=b.author %>" class="form_input">
+
+    <label for="rating">Rating Out of 10</label>
+    <input id="rating" name="rating" type="number" placeholder="add a rating" value="<%= n.rating %>" class="form_input">
+
+    <label for="note">Note</label>
+    <textarea id="note" name="note" placeholder="add a note" class="form_input"><%= n.note %></textarea>
+    <% } else{ %>
+    <label for="title">Title</label>
+    <input id="title" name="title" type="text" placeholder="add a title" class="form_input" required> 
+
+    <label for="isbn">ISBN</label>
+    <input id="isbn" name="isbn" type="text" placeholder="add a isbn" class="form_input" required>
+
+    <label for="author">Author</label>
+    <input id="author" name="author" type="text" placeholder="add Author" class="form_input" required>
+
+    <label for="rating">Rating Out of 10</label>
+    <input id="rating" name="rating" type="number" placeholder="add a rating" class="form_input" required>
+
+    <label for="note">Note</label>
+    <textarea id="note" name="note" class="form_input" placeholder="add a note" required></textarea>
+
+    <% } %>
+    <button type="submit">Submit</button>
+</form>
+</div>
+
+
+<%- include("partials/footer.ejs") %>

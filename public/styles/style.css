@@ -1,0 +1,75 @@
+body{
+    font-size: 15px;
+    background-color: rgb(233, 231, 231);
+  font-family: "Arimo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+h1,h2,h3{
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+
+}
+.box-detail{
+    max-width: 500px;
+    border: 1px solid black;
+    border-radius: 15px;
+    margin: 20px auto;
+    padding: 20px;
+}
+.box-detail:hover{
+    background-color: rgb(221, 221, 221);
+    box-shadow: 10px 10px 5px rgb(209, 223, 228);
+    border: 1px solid rgb(170, 170, 252);
+}
+.delete-button{
+    font-size: 20px;
+    border: 1px solid rgb(117, 117, 253);
+    border-radius: 5px;
+}
+.delete-button:hover{
+    background-color: rgb(208, 208, 248);
+    box-shadow: 10px 10px 5px rgb(209, 223, 228);
+}
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 30px;
+}
+
+.form-arrow {
+    font-size: 2rem;
+    margin-right: 10px;
+    line-height: 1;
+    user-select: none;
+}
+
+.book-form {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form_input {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+#note {
+    width: 500px;
+    height: 100px;
+}
+.cover-image{
+    max-width: 100px;
+    height: auto;
+}
