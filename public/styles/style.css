@@ -16,13 +16,28 @@ h1,h2,h3{
         "wdth" 100;
 
 }
-.box-detail{
+.box-detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     max-width: 500px;
     border: 1px solid black;
     border-radius: 15px;
     margin: 20px auto;
     padding: 20px;
 }
+
+.book-content {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.cover-image {
+    width: 80px;
+    height: auto;
+    object-fit: cover;
+}
+
 .box-detail:hover{
     background-color: rgb(221, 221, 221);
     box-shadow: 10px 10px 5px rgb(209, 223, 228);

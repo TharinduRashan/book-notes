@@ -7,14 +7,17 @@
 <main>
     <% book.forEach((b) => { %>
         <div class="box-detail">
-             <p><a href="/book?id=<%= b.id %>">Title: <%= b.title %></a></p>
-             <p>Author:<%= b.author %></p>
-             <p>ISBN:<%= b.isbn %></p>
-             <form action="/delete?id=<%= b.id %>&_method=DELETE" method="post">
-                <button class="delete-button">Delete</button>
-             </form>
-             <img class="cover-image" src="https://covers.openlibrary.org/b/isbn/<%= b.isbn %>-M.jpg" alt="Book Cover" />
-        </div>
+        <div class="book-content">
+        <p><a href="/book?id=<%= b.id %>">Title: <%= b.title %></a></p>
+        <p>Author: <%= b.author %></p>
+        <p>ISBN: <%= b.isbn %></p>
+        <form action="/delete?id=<%= b.id %>&_method=DELETE" method="post">
+            <button class="delete-button">Delete</button>
+        </form>
+    </div>
+    <img class="cover-image" src="https://covers.openlibrary.org/b/isbn/<%= b.isbn %>-M.jpg" alt="Book Cover" />
+</div>
+
        
     <% }); %>
         
